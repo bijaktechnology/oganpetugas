@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/item_report_comment_img_user"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:layout_marginLeft="@dimen/spacing_double"
+        android:layout_marginTop="@dimen/spacing_double"
+        tools:src="@drawable/ic_ambulance"/>
+
+    <TextView
+        android:id="@+id/item_report_comment_txt_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_double"
+        android:layout_marginTop="@dimen/spacing_double"
+        android:layout_toRightOf="@+id/item_report_comment_img_user"
+        android:textColor="#4a4a4a"
+        android:textSize="@dimen/text_body"
+        tools:text="Sarah"/>
+
+    <TextView
+        android:id="@+id/item_report_comment_txt_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_report_comment_txt_user"
+        android:layout_below="@+id/item_report_comment_txt_user"
+        android:layout_marginRight="@dimen/spacing_double"
+        android:layout_marginTop="@dimen/spacing_half"
+        android:textColor="#4a4a4a"
+        android:textSize="@dimen/text_tiny_body"
+        tools:text="While it was just a TV show, that little speech at the beginning of the original Star Trek show really did do a good job of capturing our feelings about space. It is those feelings that drive our love of astronomy and our desire to learn more and more about it."/>
+
+    <TextView
+        android:id="@+id/item_report_comment_txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_report_comment_txt_user"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/spacing_double"
+        android:textColor="#4a4a4a"
+        android:textSize="@dimen/text_tiny_body"
+        tools:text="7 Jam Lalu"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/item_report_comment_txt_comment"
+        android:layout_marginTop="@dimen/spacing_double"
+        android:background="@color/colorGrey"/>
+
+</RelativeLayout>

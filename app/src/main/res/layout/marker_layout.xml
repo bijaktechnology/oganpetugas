@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cardview_light_background"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/badge"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:paddingRight="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_profile53">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="@string/nama_lengkap"/>
+
+        <TextView
+            android:id="@+id/snippet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff7f7f7f"
+            android:textSize="14dp"/>
+        <RatingBar
+            android:id="@+id/penilaian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/colorPrimaryLight"
+            android:progressTint="@color/yellow"
+            android:rating="0"
+            android:numStars="5"
+            android:background="#fff"
+            style="?android:attr/ratingBarStyleSmall"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bookings"
+            android:visibility="visible"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+
+</LinearLayout>

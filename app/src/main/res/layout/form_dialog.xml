@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <!--nama pasien-->
+            <EditText
+                android:id="@+id/patient_data_inp_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_triple"
+                android:layout_marginRight="@dimen/spacing_triple"
+                android:hint="@string/patient_data_name"
+                android:textColor="@color/gray_4a"
+                android:textSize="@dimen/text_body"
+                android:enabled="false"/>
+            <!--nik pasien-->
+            <EditText
+                android:id="@+id/patient_data_inp_nik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_triple"
+                android:layout_marginRight="@dimen/spacing_triple"
+                android:hint="@string/patient_data_ktp"
+                android:textColor="@color/gray_4a"
+                android:textSize="@dimen/text_body"
+                android:enabled="false"/>
+            <!--layanan kesehatan-->
+            <EditText
+                android:id="@+id/patient_data_spinner_services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_triple"
+                android:layout_marginRight="@dimen/spacing_triple"
+                android:lineSpacingExtra="7.5sp"
+                android:text="@string/patient_data_services_label"
+                android:textColor="@color/gray_4a"
+                android:textSize="16sp"
+                android:enabled="false"/>
+            <!--alamat lengkap-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_triple"
+                android:layout_marginRight="@dimen/spacing_triple"
+                android:hint="@string/alamat_lengkap"
+                android:textColor="@color/gray_4a"
+                android:textSize="@dimen/text_body"
+                android:enabled="false"
+                android:id="@+id/address_pasien"/>
+            <!--keluhan pasien / catatan-->
+            <EditText
+                android:id="@+id/data_keluhan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_triple"
+                android:layout_marginRight="@dimen/spacing_triple"
+                android:hint="Keterangan"
+                android:textColor="@color/gray_4a"
+                android:textSize="@dimen/text_body"
+                android:enabled="false" />
+            <!--catatan petugas-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_triple"
+                android:layout_marginRight="@dimen/spacing_triple"
+                android:text="Catatan Petugas"
+                android:textColor="@color/gray_4a"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/catat_petugas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_triple"
+                android:layout_marginRight="@dimen/spacing_triple"
+                android:hint="Catatan Petugas"
+                android:textColor="@color/gray_4a"
+                android:textSize="@dimen/text_body" />
+
+            <ProgressBar
+                android:id="@+id/progressBare"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- ============================================= -->
+    <!-- ChildRouter -->
+    <!-- ============================================= -->
+
+    <com.bluelinelabs.conductor.ChangeHandlerFrameLayout
+        android:id="@+id/patient_data_child_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

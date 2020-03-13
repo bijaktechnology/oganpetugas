@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="163dp"
+    android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_tours_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/bg_splash"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_44"
+        />
+        <TextView
+            android:id="@+id/item_tours_txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/item_tours_txt_description"
+            android:paddingBottom="@dimen/spacing_normal"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:paddingRight="@dimen/dimen_20dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title"
+            tools:text="Waduk Jatiluhur"/>
+
+        <TextView
+            android:id="@+id/item_tours_txt_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/item_tours_txt_distance"
+            android:layout_marginBottom="@dimen/spacing_half"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:paddingRight="@dimen/dimen_20dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_tiny_body"
+            tools:text="Kecamatan Jatiluhur, Kabupaten Purwakarta"/>
+
+        <TextView
+            android:id="@+id/item_tours_txt_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/spacing_double"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:paddingRight="@dimen/dimen_20dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_tiny_body"
+            tools:text="5.4 KM"/>
+        <TextView
+            android:id="@+id/dataid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>

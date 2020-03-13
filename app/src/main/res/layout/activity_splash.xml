@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    android:orientation="vertical">
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible">
+    </com.google.android.gms.common.SignInButton>
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:src="@drawable/ic_logo_ogan"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/splash"
+        android:layout_marginTop="@dimen/spacing_double"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:text="@string/splash_purwakarta_chant"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large_body"
+        android:textStyle="normal"
+        />
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/spacing_triple"
+        android:drawableLeft="@drawable/ic_purwa"
+        android:drawablePadding="@dimen/spacing_double"
+        android:drawableStart="@drawable/ic_purwa"
+        android:gravity="center"
+        android:text="@string/splash_purwakarta"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large_body"/>
+    <TextView
+        android:id="@+id/txt_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/spacing_triple"
+        android:paddingLeft="45dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/splash_version"
+        android:textColor="@color/white"
+        android:layout_alignLeft="@id/splash"
+        android:textSize="@dimen/text_small_body"/>
+
+
+
+</RelativeLayout>

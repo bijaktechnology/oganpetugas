@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_transparent_66"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/spacing_double"
+        android:paddingRight="@dimen/spacing_double"
+        android:paddingTop="@dimen/view_padding_huge">
+
+        <TextView
+            android:id="@id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/reset_your_password"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+        <TextView
+            android:id="@id/txtCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:gravity="left"
+            android:text="@string/masukan_nik"/>
+
+
+        <EditText
+            android:id="@+id/nik_usere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_double"
+            android:gravity="center_vertical"
+            android:hint="@string/nik"
+            android:maxLength="16"
+            android:inputType="text|number"/>
+
+        <TextView
+            android:id="@id/txtCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_double"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:gravity="left"
+            android:text="@string/please_enter_your_email_address"/>
+
+
+        <EditText
+            android:id="@id/inpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_double"
+            android:gravity="center_vertical"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding_bigger"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/spacing_normal"
+                android:layout_weight="1"
+                android:text="@string/cancel"/>
+
+            <Button
+                android:id="@id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_weight="1"
+                android:background="@drawable/btn_primary_rounded"
+                android:text="@string/reset"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>
+

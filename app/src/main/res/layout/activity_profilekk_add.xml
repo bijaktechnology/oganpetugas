@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+        <TextView
+            style="@style/ProfileComponent"
+            android:layout_marginTop="@dimen/spacing_triple"
+            android:text="@string/profile_family_list"/>
+        <!--Nama Lengkap-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ProfileComponent.TextInputLayout"
+            android:layout_marginTop="@dimen/spacing_normal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_family_inp_name"
+                style="@style/ProfileComponent.EditText"
+                android:hint="@string/profile_name"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Nomor KTP-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ProfileComponent.TextInputLayout"
+            android:layout_marginTop="@dimen/spacing_normal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_family_inp_ktp"
+                style="@style/ProfileComponent.EditText"
+                android:hint="@string/no_ktp"
+                android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Tempat Lahir-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ProfileComponent.TextInputLayout"
+            android:layout_marginTop="@dimen/spacing_normal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_family_inp_dobplace"
+                style="@style/ProfileComponent.EditText"
+                android:hint="@string/profile_tempat_dob"
+                android:inputType="textCapSentences"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Tanggal Lahir-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ProfileComponent.TextInputLayout"
+            android:layout_marginTop="@dimen/spacing_normal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_family_inp_dob"
+                style="@style/ProfileComponent.EditText"
+                android:hint="@string/profile_dob"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Jenis Kelamin-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ProfileComponent.TextInputLayout"
+            android:layout_marginTop="@dimen/spacing_normal">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/add_family_inp_sex"
+                style="@style/ProfileComponent.EditText"
+                android:hint="@string/profile_jenis_kelamin"
+                android:inputType="textAutoComplete"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Hubungan Keluarga-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ProfileComponent.TextInputLayout"
+            android:layout_marginTop="@dimen/spacing_normal">
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/add_family_inp_status"
+                style="@style/ProfileComponent.EditText"
+                android:hint="@string/profile_status"
+                android:inputType="textAutoComplete"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Nama Ibu kandung-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ProfileComponent.TextInputLayout"
+            android:layout_marginTop="@dimen/spacing_normal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_family_inp_mother_name"
+                style="@style/ProfileComponent.EditText"
+                android:hint="@string/profile_mother_name"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--button submit-->
+        <Button
+            android:id="@+id/add_family_btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_triple"
+            android:layout_marginRight="@dimen/spacing_triple"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/btn_primary_rounded"
+            android:text="@string/save"
+            android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

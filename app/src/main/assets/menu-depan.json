@@ -1,0 +1,71 @@
+{
+  "status": true,
+  "message": [
+    {
+      "id": "1",
+      "nama_menu": "Destinasi Wisata",
+      "urutan": "1",
+      "activity": "Destinasi",
+      "icon": "ic_wisata",
+      "row_status": "0",
+      "created_time": "2019-09-14 14:45:15"
+    },
+    {
+      "id": "2",
+      "nama_menu": "Laporan Warga",
+      "urutan": "2",
+      "activity": "Laporan",
+      "icon": "ic_laporan",
+      "row_status": "0",
+      "created_time": "2019-09-14 14:45:40"
+    },
+    {
+      "id": "3",
+      "nama_menu": "Sampurasun Ambulance",
+      "urutan": "3",
+      "activity": "Ambulance",
+      "icon": "ic_ambulance",
+      "row_status": "0",
+      "created_time": "2019-09-14 13:46:05"
+    },
+    {
+      "id": "4",
+      "nama_menu": "Sampurasun Dokter",
+      "urutan": "4",
+      "activity": "Dokter",
+      "icon": "ic_doctor",
+      "row_status": "0",
+      "created_time": "2019-09-14 14:46:23"
+    },
+    {
+      "id": "5",
+      "nama_menu": "Sampurasun Bidan",
+      "urutan": "5",
+      "activity": "Bidan",
+      "icon": "ic_bidan",
+      "row_status": "0",
+      "created_time": "2019-09-14 14:46:34"
+    },
+    /*{
+      "id": "6",
+      "nama_menu": "Sampurasun Tukang",
+      "urutan": "6",
+      "activity": "Tukang",
+      "icon": "ic_tukang",
+      "row_status": "0",
+      "created_time": "2019-09-14 14:47:09"
+    },*/
+    {
+      "id": "7",
+      "nama_menu": "Lokasi Penting",
+      "urutan": "7",
+      "activity": "Lokasi",
+      "icon": "ic_lokasi_penting",
+      "row_status": "0",
+      "created_time": "2019-09-14 14:46:51"
+    }
+  ],
+  "param": "SELECT *\nFROM `ol_menu_depan`\nORDER BY `urutan`",
+  "totaldata": 7,
+  "totaltime": 3.11930298805
+}

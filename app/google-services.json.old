@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "559588150540",
+    "firebase_url": "https://samkes-af658.firebaseio.com",
+    "project_id": "samkes-af658",
+    "storage_bucket": "samkes-af658.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559588150540:android:4784147a31c7cc8b",
+        "android_client_info": {
+          "package_name": "com.bijak.techno.samkespeg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559588150540-4n1434f015sr6pmnq3nthtvc13lugslr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bijak.techno.samkespeg",
+            "certificate_hash": "1e1694cef29f833e09ec854eb5e092e29af0dbe8"
+          }
+        },
+        {
+          "client_id": "559588150540-61oeu7pused5t0fi19f4dm4tkf81dcu5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAidIZM82mqJMJeblV-5E_IJaRWqVcTuIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559588150540-61oeu7pused5t0fi19f4dm4tkf81dcu5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

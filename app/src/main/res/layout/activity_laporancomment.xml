@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/toolbar"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/comment_swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/comment_bottom_container"
+        android:layout_marginTop="?actionBarSize">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comment_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/comment_txt_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/error_no_data"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/middle_gray"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/comment_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_padding_huge"
+        android:layout_alignParentBottom="true"
+        android:background="#ededed"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/comment_inp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/comment_write_here"
+            android:imeOptions="actionSend"
+            android:paddingLeft="@dimen/spacing_double"
+            android:paddingRight="@dimen/spacing_double"/>
+
+        <Button
+            android:id="@+id/comment_btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_primary"
+            android:text="@string/send"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

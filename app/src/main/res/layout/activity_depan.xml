@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    android:fitsSystemWindows="true">
+    <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
+
+        <ImageView
+            android:id="@+id/main_menu_img_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/spacing_triple"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_logo_ogan"
+            tools:ignore="ContentDescription"
+            android:layout_below="@id/toolbar"/>
+
+        <ImageButton
+            android:id="@+id/menu_btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/spacing_double"
+            android:src="@drawable/ic_settings"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/main_menu_img_content"
+            android:layout_marginTop="@dimen/spacing_triple"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:id="@+id/main_menu_wisata"
+                    style="@style/MainMenuCard">
+
+                    <ImageView
+                        style="@style/MainMenuCardImage"
+                        android:src="@drawable/ic_wisata"/>
+
+                    <TextView
+                        style="@style/MainMenuCardText"
+                        android:text="@string/menu_destinasi_wisata"/>
+
+                </LinearLayout>
+
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:id="@+id/main_menu_laporan"
+                    style="@style/MainMenuCard"
+                    android:visibility="visible">
+
+                    <ImageView
+                        style="@style/MainMenuCardImage"
+                        android:src="@drawable/ic_laporan"/>
+
+                    <TextView
+                        style="@style/MainMenuCardText"
+                        android:text="@string/menu_laporan"/>
+                </LinearLayout>
+
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:id="@+id/main_menu_semar"
+                    style="@style/MainMenuCard">
+
+                    <ImageView
+                        style="@style/MainMenuCardImage"
+                        android:src="@drawable/ic_semar"/>
+
+                    <TextView
+                        style="@style/MainMenuCardText"
+                        android:text="@string/menu_semar"/>
+                </LinearLayout>
+
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:id="@+id/main_menu_doctor"
+                    style="@style/MainMenuCard"
+                    >
+
+                    <ImageView
+                        style="@style/MainMenuCardImage"
+                        android:src="@drawable/ic_doctor"/>
+
+                    <TextView
+                        style="@style/MainMenuCardText"
+                        android:text="@string/menu_dokter"/>
+                </LinearLayout>
+
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:id="@+id/main_menu_bidan"
+                    style="@style/MainMenuCard">
+
+                    <ImageView
+                        style="@style/MainMenuCardImage"
+                        android:src="@drawable/ic_bidan"/>
+
+                    <TextView
+                        style="@style/MainMenuCardText"
+                        android:text="@string/menu_bidan"/>
+                </LinearLayout>
+
+
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:id="@+id/main_menu_ojek"
+                    style="@style/MainMenuCard"
+                    android:visibility="gone">
+
+                    <ImageView
+                        style="@style/MainMenuCardImage"
+                        android:src="@drawable/ic_ojek"/>
+
+                    <TextView
+                        style="@style/MainMenuCardText"
+                        android:text="@string/menu_ojek"/>
+                </LinearLayout>
+
+
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:id="@+id/main_menu_bursa"
+                    style="@style/MainMenuCard"
+                    android:visibility="gone">
+
+                    <ImageView
+                        style="@style/MainMenuCardImage"
+                        android:src="@drawable/ic_bursa_kerja"/>
+
+                    <TextView
+                        style="@style/MainMenuCardText"
+                        android:text="@string/menu_bursa"/>
+                </LinearLayout>
+
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:id="@+id/main_menu_lokasi_penting"
+                    style="@style/MainMenuCard">
+
+                    <ImageView
+                        style="@style/MainMenuCardImage"
+                        android:src="@drawable/ic_lokasi_penting"/>
+
+                    <TextView
+                        style="@style/MainMenuCardText"
+                        android:text="@string/menu_lokasi"/>
+                </LinearLayout>
+
+                <!-- ============================================= -->
+                <!-- SOS -->
+                <!-- ============================================= -->
+
+                <Button
+                    android:id="@+id/main_menu_sos"
+                    style="@style/MainMenuCard"
+                    android:background="@drawable/btn_accent_rounded"
+                    android:gravity="center"
+                    android:text="@string/menu_sos"
+                    android:textColor="@color/white"
+                    android:visibility="gone"/>
+
+                <!-- ============================================= -->
+                <!-- Bottom -->
+                <!-- ============================================= -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/spacing_triple"
+                    android:paddingTop="@dimen/spacing_triple"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    tools:text="Pengumuman: Lorem ipsum dolor sit amet consedturer lrem"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/main_menu_child_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+{
+  "status": true,
+  "message": [
+    {
+      "kategori_id": "1",
+      "nama_kategori": "Tukang Kebun",
+      "icon": "grass_64px",
+      "is_active": "1",
+      "urutan": "1",
+      "created_time": "2019-09-16 22:47:16"
+    },
+    {
+      "kategori_id": "2",
+      "nama_kategori": "Tukang Kayu",
+      "icon": "design_64px",
+      "is_active": "1",
+      "urutan": "2",
+      "created_time": "2019-09-16 22:47:28"
+    },
+    {
+      "kategori_id": "3",
+      "nama_kategori": "Tukang Ledeng",
+      "icon": "plumbing_64px",
+      "is_active": "1",
+      "urutan": "3",
+      "created_time": "2019-09-16 22:47:36"
+    },
+    {
+      "kategori_id": "4",
+      "nama_kategori": "Tukang Bangunan",
+      "icon": "hammer_64px",
+      "is_active": "1",
+      "urutan": "4",
+      "created_time": "2019-09-16 22:47:46"
+    },
+    {
+      "kategori_id": "5",
+      "nama_kategori": "Tukang Galian",
+      "icon": "spade_64px",
+      "is_active": "1",
+      "urutan": "5",
+      "created_time": "2019-09-16 22:47:54"
+    },
+    {
+      "kategori_id": "6",
+      "nama_kategori": "Tukang Elektronik",
+      "icon": "system_task_64px",
+      "is_active": "1",
+      "urutan": "6",
+      "created_time": "2019-09-16 22:48:05"
+    },
+    {
+      "kategori_id": "7",
+      "nama_kategori": "Tukang Bersih Rumah",
+      "icon": "housekeeping_64px",
+      "is_active": "1",
+      "urutan": "7",
+      "created_time": "2019-09-16 22:48:12"
+    },
+    {
+      "kategori_id": "8",
+      "nama_kategori": "Tukang Lainnya",
+      "icon": "deviation_64px",
+      "is_active": "1",
+      "urutan": "8",
+      "created_time": "2019-09-16 22:59:27"
+    }
+  ],
+  "param": "SELECT *\nFROM `ol_kategori_tukang`\nWHERE `is_active` = '1'\nORDER BY `urutan`",
+  "totaldata": 8,
+  "totaltime": 7.14172697067
+}

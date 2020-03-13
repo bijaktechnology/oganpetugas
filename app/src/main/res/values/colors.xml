@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <color name="colorPrimary">#318F35</color>
+    <color name="colorPrimaryDark">#8e44ad</color>
+    <color name="colorPrimaryLight">#d7ccc8</color>
+
+    <!--<color name="colorAccent">#2ecc71</color>-->
+    <color name="colorAccent">#F2281B</color>
+    <color name="colorAccentBright">#e53935</color>
+    <color name="colorAccentLight">#2ecc71</color>
+    <color name="colorBlue">#4F8FE9</color>
+    <color name="colorBlueSelected">#295da6</color>
+
+    <color name="grey_hard">#96989A</color>
+    <color name="grey_medium">#BDBFC1</color>
+
+    <color name="grey_bg">#EBEFF0</color>
+    <color name="grey_text">#222D31</color>
+    <color name="me_chat_bg">#FFE0B2</color>
+
+    <color name="error">#8b0000</color>
+    <color name="info">#000080</color>
+    <color name="success">#008000</color>
+    <color name="white">#FFFF</color>
+
+    <!--Others-->
+    <!--Others-->
+    <color name="black">#000</color>
+    <color name="black_88">#8000</color>
+    <color name="black_44">#4000</color>
+    <color name="transparent">#00000000</color>
+    <color name="yellow_info">#fef6b1</color>
+    <color name="blueTransparent">#444F8FE9</color>
+    <!--Others-->
+    <color name="text_color_gray">#8A8D93</color>
+    <color name="white_transparent_aa">#AFFF</color>
+    <color name="white_transparent_66">#6FFF</color>
+    <color name="white_transparent_ee">#EFFF</color>
+    <!--Tour-->
+    <color name="text_tour">#39393a</color>
+
+    <!--Ogan Color-->
+    <color name="gray_4a">#4a4a4a</color>
+    <color name="gray_69">#696969</color>
+    <color name="secondary_text">#ff757575</color>
+    <!--Others-->
+
+    <!--System Colors-->
+    <color name="light_gray">#EDF0F2</color>
+    <color name="light_blue_gray">#E1E3E7</color>
+    <color name="medium_gray">#C8CBD1</color>
+    <color name="middle_gray">#9197A4</color>
+    <color name="primary_black">#333333</color>
+    <color name="bright_green">#7CBE42</color>
+    <color name="pastel_red">#EC6857</color>
+
+    <!--Signature Blue-->
+
+    <!--Product Colors-->
+    <color name="yellow">#F1BA24</color>
+    <color name="colorGrey">#C5C5C5</color>
+
+    <!--Selected Product-->
+
+    <!--Risk Profile Colors-->
+    <color name="aggresive_red">#E0562D</color>
+    <color name="moderate_yellow">#F4B628</color>
+    <color name="conservative_green">#58B146</color>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/namapasien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sample"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="#424242"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tglbooking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textStyle="normal"
+                    android:drawablePadding="@dimen/spacing_normal"
+                    android:drawableStart="@drawable/overtime_24px"
+                    android:text="Tgl Booking"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/patient_keluhan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keluhan"
+                    android:ellipsize="none"
+                    android:scrollHorizontally="false"
+                    />
+                <TextView
+                    android:id="@+id/jmpis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_normal">
+                <TextView
+                    android:id="@+id/petugase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/spacing_normal"/>
+                <TextView
+                    android:id="@+id/tglprocess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:drawableStart="@drawable/stopwatch_24px"
+                    android:drawablePadding="@dimen/spacing_normal"
+                    android:layout_centerHorizontal="true"
+                    android:text="Tanggal Process"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/durasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+                <RatingBar
+                    android:id="@+id/penilaian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/colorPrimaryLight"
+                    android:progressTint="@color/yellow"
+                    android:rating="0"
+                    android:numStars="5"
+                    android:background="#fff"
+                    style="?android:attr/ratingBarStyleSmall"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e5e555"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+</com.balysv.materialripple.MaterialRippleLayout>

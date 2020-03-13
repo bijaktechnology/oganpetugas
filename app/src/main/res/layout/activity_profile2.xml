@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:id="@+id/imgroom">
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="?colorPrimary"/>-->
+
+                <ImageView
+                    android:id="@+id/profile_img_avatar"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/circle_white"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:padding="@dimen/spacing_normal"
+                    android:src="@drawable/ic_profile82"
+                    tools:ignore="ContentDescription"/>
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/profile_img_avatar"
+                    android:layout_alignRight="@+id/profile_img_avatar"
+                    android:background="@drawable/circle_white"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:padding="@dimen/spacing_half"
+                    android:src="@drawable/ic_edit"/>
+
+            </RelativeLayout>
+
+            <!-- ============================================= -->
+            <!-- Form Data -->
+            <!-- ============================================= -->
+
+            <TextView
+                style="@style/ProfileComponent"
+                android:layout_marginTop="@dimen/spacing_double"
+                android:text="@string/profile_data_pribadi"
+                android:textSize="@dimen/text_body"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout"
+                android:layout_marginTop="@dimen/spacing_normal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_inp_username"
+                    style="@style/ProfileComponent.EditText"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/profile_username"
+                    android:inputType="none"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout"
+                android:layout_marginTop="@dimen/spacing_normal"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_inp_email"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout"
+                android:layout_marginTop="@dimen/spacing_normal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_inp_name"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/profile_name"
+                    android:inputType="textCapWords"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout"
+                android:layout_marginTop="@dimen/spacing_normal"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_inp_password"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/alamat_lengkap"
+                    android:inputType="textCapSentences"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout"
+                android:layout_marginTop="@dimen/spacing_normal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_inp_dob"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/profile_dob"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout"
+                android:layout_marginTop="@dimen/spacing_normal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_inp_mother_name"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/profile_mother_name"
+                    android:inputType="textCapWords"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout"
+                android:layout_marginTop="@dimen/spacing_normal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_inp_phone"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/phone_number"
+                    android:inputType="phone"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- ============================================= -->
+            <!-- Data Kependudukan -->
+            <!-- ============================================= -->
+            <TextView
+                style="@style/ProfileComponent"
+                android:layout_marginTop="@dimen/spacing_double"
+                android:text="@string/profile_civil_data"
+                android:textSize="@dimen/text_body"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout"
+                android:layout_marginTop="@dimen/spacing_normal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_inp_no_ktp"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/no_ktp"
+                    android:inputType="number"
+                    android:maxLength="16"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout"
+                android:layout_marginTop="@dimen/spacing_normal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_inp_no_kk"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/no_kk"
+                    android:inputType="number"
+                    android:maxLength="16"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/profile_btn_family_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_double"
+                android:layout_marginLeft="@dimen/spacing_triple"
+                android:layout_marginRight="@dimen/spacing_triple"
+                android:layout_marginTop="@dimen/spacing_triple"
+                android:background="@drawable/btn_primary_outline"
+                android:text="@string/profile_family_list"
+                android:textColor="?colorPrimary"
+                />
+            <Button
+                android:id="@+id/profile_btn_change_domicile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_triple"
+                android:layout_marginLeft="@dimen/spacing_triple"
+                android:layout_marginRight="@dimen/spacing_triple"
+                android:background="@drawable/btn_primary_outline"
+                android:text="@string/profile_change_domicile"
+                android:textColor="?colorPrimary"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

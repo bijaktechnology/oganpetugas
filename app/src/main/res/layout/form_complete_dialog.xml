@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anda Telah selesai dilayani oleh "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txtPesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <requestFocus />
+
+    </EditText>
+
+    <RatingBar
+        android:id="@+id/simpleRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:background="#ccc"
+        android:backgroundTint="@color/colorPrimaryLight"
+        android:progressTint="@color/yellow"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:rating="0"
+        android:numStars="5"/>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#f00"
+        android:padding="10dp"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold" android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="BaseTheme"/>
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item> 
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item> 
+        <!--<item name="colorControlHighlight">@color/colorAccentLight</item> -->
+        <item name="colorAccent">@color/yellow</item>
+        <!-- color for widget theming, eg EditText. Doesn't effect ActionBar. -->
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+    <!--Digits-->
+    <style name="AppToolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:colorControlNormal">@color/white</item>
+    </style>
+    <!--<style name="ThemeMenuToolbar" parent="ThemeOverlay.AppCompat">
+        <item name="android:colorControlNormal">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppToolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:colorControlNormal">@color/white</item>
+    </style>-->
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+    <style name="MainMenuCard">
+        <item name="android:layout_width">276dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/spacing_double</item>
+        <item name="android:paddingRight">@dimen/spacing_double</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="SubMenuCard">
+        <item name="android:layout_width">276dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/spacing_double</item>
+        <item name="android:paddingRight">@dimen/spacing_double</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="MainMenuCardImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginRight">@dimen/spacing_double</item>
+    </style>
+
+    <style name="MainMenuCardText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/gray_4a</item>
+    </style>
+
+    <style name="ProfileComponent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/spacing_triple</item>
+        <item name="android:layout_marginRight">@dimen/spacing_triple</item>
+        <item name="android:lineSpacingExtra">5.5sp</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textSize">@dimen/text_small_body</item>
+    </style>
+
+    <style name="ProfileComponent.TextInputLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ProfileComponent.EditText">
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:textColor">@color/gray_4a</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ProfileComponent.TextInputLayout.Register">
+        <item name="android:layout_marginRight">@dimen/spacing_double</item>
+        <item name="android:layout_marginLeft">@dimen/spacing_double</item>
+    </style>
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/yellow</item>
+        <item name="colorControlActivated">@color/light_gray</item>
+    </style>
+
+</resources>

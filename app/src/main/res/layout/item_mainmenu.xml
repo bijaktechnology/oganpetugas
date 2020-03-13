@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/light_gray"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16.0dip">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cvImageSlider"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="16.0dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtMarque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Text Scrolling"
+                android:textColor="@color/design_default_color_primary"
+                android:textSize="18.0sp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:drawableStart="@drawable/rss_24px"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center_vertical"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:orientation="horizontal"
+                android:padding="8.0dip">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip" />
+            </LinearLayout>
+            <!-- ============================================= -->
+            <!-- SOS -->
+            <!-- ============================================= -->
+
+            <Button
+                android:id="@+id/main_menu_sos"
+                style="@style/MainMenuCard"
+                android:background="@drawable/btn_accent_rounded"
+                android:gravity="center"
+                android:text="@string/menu_sos112"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="8.0dip"
+                android:orientation="horizontal"
+                android:padding="8.0dip">
+                <WebView
+                    android:id="@+id/webviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-30dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBannerTop"
+            android:layout_width="fill_parent"
+            android:layout_height="60.0dip"
+            android:background="@color/colorPrimary"
+            android:padding="5.0dip">
+
+            <ImageView
+                android:id="@+id/logoimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo_ogan" />
+
+            <ImageView
+                android:id="@+id/btnSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/dimen_20dp"
+                android:src="@drawable/ic_settings" />
+
+            <TextView
+                android:id="@+id/usrLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/logoimg"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="Nama User"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_title" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvImageSlider"
+            android:layout_width="fill_parent"
+            android:layout_height="200.0dip"
+            android:layout_below="@id/rlBannerTop"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="10.0dip"
+            app:cardCornerRadius="8.0dip">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/linPagesContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="8.0dip"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</ScrollView>

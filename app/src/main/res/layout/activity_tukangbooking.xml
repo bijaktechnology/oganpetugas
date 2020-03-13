@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+    <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
+    <LinearLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical"
+        android:visibility="gone"/>
+    <ScrollView
+        android:id="@+id/scroled"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frame_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/list_tukang">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                style="@style/ProfileComponent"
+                android:layout_marginTop="@dimen/spacing_triple"
+                android:text="@string/deskripsi_pekerjaan"
+                android:visibility="gone"/>
+            <!--Deskripsi Pekerjaan-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/deskripsi"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/deskripsi_pekerjaan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:lines="6"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:scrollHorizontally="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:visibility="gone">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/keahlian"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="Keahlian yang diperlukan"
+                    android:inputType="textCapWords"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/spacing_large"
+        android:visibility="gone"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/btn_booking"
+            style="@style/SubMenuCard"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:background="@drawable/btn_blue_rounded">
+
+            <ImageView
+                android:id="@+id/petugas"
+                style="@style/MainMenuCardImage"
+                android:src="@drawable/ic_tukang" />
+
+            <TextView
+                android:id="@+id/book"
+                style="@style/MainMenuCardText"
+                android:text="@string/booking" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

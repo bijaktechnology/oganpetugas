@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.LaporandetailActivity"
+    android:fitsSystemWindows="true">
+    <include layout="@layout/toolbar"/>
+    <EditText
+        android:id="@+id/judulaporan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:hint="@string/judul_laporan"
+        android:inputType="textCapWords"
+        android:paddingBottom="10dp"
+        android:textSize="18sp"
+        android:ems="10"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judulaporan"
+        android:layout_centerHorizontal="false"
+        android:hint="@string/masukan_detail_laporan"
+        android:inputType="textMultiLine|textCapSentences"
+        android:lines="8"
+        android:ems="10"
+        android:maxLines="10"
+        android:minLines="2"
+        android:scrollbars="vertical"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/kat_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/camera_24px"
+        android:layout_below="@id/editText"
+        app:fabSize="normal"/>
+
+    <Button
+        android:text="@string/buat_laporan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:drawableStart="@drawable/camera_24px"
+        android:drawablePadding="16dp"
+        android:layout_below="@id/editText"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/dimen_20dp" android:visibility="gone"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/button"
+        android:layout_above="@id/button2"
+        android:contentDescription="@string/gambar_laporan"
+        android:padding="5dp"
+        android:background="@drawable/bg_gray_rounded"/>
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/simpan_laporan"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:enabled="false"/>
+
+</RelativeLayout>

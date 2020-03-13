@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+
+    <!--<include layout="@layout/toolbar" android:id="@+id/toolbar"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/spacing_triple"
+            android:text="@string/patient_data_input_patient_data"
+            android:textColor="@color/gray_69"
+            android:textSize="@dimen/text_title"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:id="@+id/namapasiene"
+            android:completionThreshold="1"
+            android:layout_marginLeft="@dimen/spacing_triple"
+            android:layout_marginRight="@dimen/spacing_triple"
+            android:layout_marginTop="@dimen/spacing_triple"
+            android:hint="Nama pasien"
+            android:textSize="@dimen/text_body"
+            android:inputType="textCapWords"
+            />
+
+        <EditText
+            android:id="@+id/patient_data_inp_name"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginLeft="@dimen/spacing_triple"
+            android:layout_marginRight="@dimen/spacing_triple"
+            android:layout_marginTop="@dimen/spacing_triple"
+            android:hint="@string/patient_data_name"
+            android:textColor="@color/gray_4a"
+            android:textSize="@dimen/text_body"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/patient_data_inp_nik"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginLeft="@dimen/spacing_triple"
+            android:layout_marginRight="@dimen/spacing_triple"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:hint="@string/patient_data_ktp"
+            android:textColor="@color/gray_4a"
+            android:textSize="@dimen/text_body"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/patient_keluhan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_triple"
+            android:layout_marginRight="@dimen/spacing_triple"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:hint="@string/keluhan"
+            android:textColor="@color/gray_4a"
+            android:textSize="@dimen/text_body"
+            android:inputType="textMultiLine|textCapSentences"
+            android:lines="6"
+            android:maxLines="6"
+            android:minLines="3"
+            android:outlineProvider="background"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_triple"
+            android:layout_marginRight="@dimen/spacing_triple"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:lineSpacingExtra="7.5sp"
+            android:text="@string/patient_data_services_label"
+            android:textColor="@color/gray_4a"
+            android:textSize="12sp"/>
+
+        <Spinner
+            android:id="@+id/patient_data_spinner_services"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginLeft="@dimen/spacing_triple"
+            android:layout_marginRight="@dimen/spacing_triple"
+            tools:listitem=""/>
+
+        <Button
+            android:id="@+id/patient_data_btn_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_triple"
+            android:layout_marginRight="@dimen/spacing_triple"
+            android:layout_marginTop="@dimen/spacing_triple"
+            android:background="@drawable/btn_primary_rounded"
+            android:drawableRight="@drawable/ic_person"
+            android:paddingLeft="@dimen/spacing_normal"
+            android:paddingRight="@dimen/spacing_normal"
+            android:text="Ambil Dari Daftar Keluarga"
+            android:textColor="@color/white" android:visibility="gone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/petugas_id"
+            android:visibility="invisible"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/latitude"
+            android:visibility="invisible"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/longitude"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_triple"
+            android:layout_marginRight="@dimen/spacing_triple"
+            android:layout_marginTop="@dimen/spacing_triple"
+            android:background="@color/yellow_info"
+            android:lineSpacingExtra="5.5sp"
+            android:padding="@dimen/spacing_double"
+            android:text="@string/patient_data_notice"
+            android:textColor="@color/gray_4a"
+            android:textSize="@dimen/text_small_body"
+            android:visibility="gone"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_triple"
+                android:layout_marginRight="@dimen/spacing_triple"
+                android:layout_marginTop="@dimen/spacing_triple"
+                android:background="@drawable/btn_accent_rounded"
+                android:drawableLeft="@drawable/ic_notifications"
+                android:drawablePadding="@dimen/spacing_large"
+                android:paddingLeft="@dimen/spacing_normal"
+                android:paddingRight="@dimen/spacing_normal"
+                android:text="Submit Booking"
+                android:textColor="@color/white"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="@dimen/spacing_double"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/patient_data_btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="@dimen/spacing_double"
+                android:src="@drawable/ic_green_arrow"
+                app:backgroundTint="@color/white"
+                app:fabSize="normal"
+                app:rippleColor="?colorPrimary"
+                android:visibility="gone"
+                />
+
+        </FrameLayout>
+        <ProgressBar
+            android:id="@+id/progrebar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <!-- ============================================= -->
+    <!-- ChildRouter -->
+    <!-- ============================================= -->
+
+    <com.bluelinelabs.conductor.ChangeHandlerFrameLayout
+        android:id="@+id/patient_data_child_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

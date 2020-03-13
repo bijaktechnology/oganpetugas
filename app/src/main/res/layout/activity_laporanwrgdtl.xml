@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/report_detail_img_user"
+                    android:layout_width="@dimen/dimen_40dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_marginLeft="@dimen/spacing_double"
+                    android:layout_marginTop="@dimen/spacing_double"
+                    android:src="@drawable/ic_ambulance"/>
+
+                <RelativeLayout
+                    android:id="@+id/report_detail_view_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_double"
+                    android:layout_marginRight="@dimen/spacing_double"
+                    android:layout_marginTop="@dimen/spacing_double"
+                    android:layout_toRightOf="@+id/report_detail_img_user">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/report_detail_txt_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4a4a4a"
+                            android:textSize="@dimen/text_body"
+                            tools:text="Sarah"
+                            android:inputType="textCapSentences"/>
+
+                        <TextView
+                            android:id="@+id/report_detail_txt_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_half"
+                            android:textColor="#4a4a4a"
+                            android:textSize="@dimen/text_tiny_body"
+                            tools:text="Jl. Jend Sudirman.."
+                            android:inputType="textCapWords"/>
+
+                        <TextView
+                            android:id="@+id/report_detail_txt_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_tiny"
+                            android:textColor="#4a4a4a"
+                            android:textSize="@dimen/text_tiny_body"
+                            tools:text="7 Jam Lalu"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/report_detail_txt_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/spacing_normal"
+                            android:textColor="#6e6e6e"
+                            android:textSize="@dimen/text_tiny_body"
+                            tools:text="Jalan Rusak"
+                            android:inputType="textCapWords"/>
+
+                        <ImageView
+                            android:id="@+id/report_detail_img_category"
+                            android:layout_width="@dimen/view_padding_bigger"
+                            android:layout_height="@dimen/view_padding_bigger"
+                            android:src="@drawable/ic_banjir"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/report_detail_img_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="252dp"
+                    android:layout_below="@+id/report_detail_view_top"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_splash"/>
+
+                <TextView
+                    android:id="@+id/report_txt_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/report_detail_img_report"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/spacing_half"
+                    android:background="@drawable/bg_status_wait"
+                    android:paddingBottom="@dimen/spacing_half"
+                    android:paddingLeft="@dimen/spacing_double"
+                    android:paddingRight="@dimen/spacing_double"
+                    android:paddingTop="@dimen/spacing_half"
+                    android:text="Menunggu"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_tiny_body"/>
+
+                <LinearLayout
+                    android:id="@+id/report_detail_view_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/report_detail_img_report"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/spacing_double"
+                    android:paddingRight="@dimen/spacing_double">
+
+
+                    <TextView
+                        android:id="@+id/report_detail_txt_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:drawablePadding="@dimen/spacing_half"
+                        android:drawableRight="@drawable/comments_24px"
+                        android:gravity="center"
+                        android:padding="@dimen/spacing_double"
+                        android:textSize="@dimen/text_small_body"
+                        tools:text="15"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/report_detail_txt_love"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:drawablePadding="@dimen/spacing_tiny"
+                        android:drawableRight="@drawable/like_it_24px"
+                        android:gravity="center"
+                        android:padding="@dimen/spacing_double"
+                        android:textSize="@dimen/text_small_body"
+                        tools:text="25"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/report_detail_img_map"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="@dimen/spacing_double"
+                        android:src="@drawable/google_maps_24px"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/report_detail_img_bookmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/spacing_normal"
+                        android:background="?selectableItemBackground"
+                        android:padding="@dimen/spacing_double"
+                        android:src="@drawable/favorites_filled_24px"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/report_detail_txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/report_detail_view_bottom"
+                    android:layout_marginLeft="@dimen/spacing_double"
+                    android:layout_marginRight="@dimen/spacing_double"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:textColor="#4a4a4a"
+                    android:textSize="@dimen/text_body"
+                    tools:text="Jalan bolong"
+                    android:inputType="textCapWords"/>
+
+                <TextView
+                    android:id="@+id/report_detail_txt_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/report_detail_txt_title"
+                    android:layout_marginLeft="@dimen/spacing_double"
+                    android:layout_marginRight="@dimen/spacing_double"
+                    android:layout_marginTop="@dimen/spacing_half"
+                    android:textColor="#4a4a4a"
+                    android:textSize="@dimen/text_small_body"
+                    tools:text="Jalan di dekat jembatan rusak, apalagi ketika hujan akan sangat macet lorem ipsum dolor"/>
+
+                <View
+                    android:id="@+id/report_detail_view_bottom_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/report_detail_txt_desc"
+                    android:layout_marginTop="@dimen/spacing_double"
+                    android:background="@color/colorGrey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/report_detail_view_bottom_divider"
+                    android:layout_marginTop="@dimen/spacing_double"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_double"
+                        android:layout_marginRight="@dimen/spacing_double"
+                        android:text="@string/comment"
+                        android:textColor="#4a4a4a"
+                        android:textSize="@dimen/text_body"/>
+
+                    <ProgressBar
+                        android:id="@+id/report_detial_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="@dimen/spacing_double"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/report_detail_view_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_double"
+                        android:orientation="vertical"/>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/comment_recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey"/>
+
+        <LinearLayout
+            android:id="@+id/comment_bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_padding_huge"
+            android:layout_alignParentBottom="true"
+            android:background="#ededed"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/report_detail_inp_comment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/comment_write_here"
+                android:imeOptions="actionDone"
+                android:paddingLeft="@dimen/spacing_double"
+                android:paddingRight="@dimen/spacing_double"/>
+
+            <Button
+                android:id="@+id/report_detail_btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_primary"
+                android:text="@string/send"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ============================================= -->
+    <!-- Child Container -->
+    <!-- ============================================= -->
+
+    <com.bluelinelabs.conductor.ChangeHandlerFrameLayout
+        android:id="@+id/report_detail_child_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

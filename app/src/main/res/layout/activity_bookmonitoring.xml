@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".activity.BookmonActivity"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/btn_booking"
+            style="@style/SubMenuCard"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:background="@drawable/btn_blue_rounded"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/petugas"
+                style="@style/MainMenuCardImage"
+                android:src="@drawable/ic_profile82"
+                android:contentDescription="@string/nama_lengkap"/>
+
+            <TextView
+                android:id="@+id/book"
+                style="@style/MainMenuCardText"
+                android:text="@string/complete" />
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_drawer_height"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorBlue"
+            android:padding="@dimen/spacing_normal">
+            <TextView
+                android:id="@+id/txtCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:drawableStart="@drawable/ok_48px"
+                android:drawablePadding="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_title"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Complete Jobs"/>
+
+            <ImageView
+                android:id="@+id/chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/message_48px"
+                android:layout_toRightOf="@+id/txtCompleted"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:tooltipText="Hubungi via Chat"/>
+
+            <ImageView
+                android:id="@+id/dibatalkan"
+                android:layout_width="59dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/cancel_48px"
+                android:clickable="true"
+                android:focusable="true"
+                android:tooltipText="Batal Booking"/>
+
+
+        </RelativeLayout>
+    <!--</LinearLayout>-->
+
+
+
+</RelativeLayout>

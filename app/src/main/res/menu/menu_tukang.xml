@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.TukangbookingActivity">
+
+    <item android:id="@+id/newlap"
+        android:title="Tukang Terdekat"
+        android:icon="@drawable/baseline_exit_to_app_24"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/populer"
+        android:title="Tukang Terpopuler"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="never" />
+</menu>

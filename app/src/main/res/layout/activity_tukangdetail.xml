@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+    <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imgroom"
+                android:padding="@dimen/dimen_20dp">
+                <ImageView
+                    android:id="@+id/profile_img_avatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/circle_white"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:padding="@dimen/spacing_normal"
+                    android:src="@drawable/ic_profile82"
+                    tools:ignore="ContentDescription"/>
+                <TextView
+                    android:padding="@dimen/text_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_img_avatar"
+                    android:id="@+id/nama_tukang"
+                    android:text="@string/nama_tukang"
+                    android:textSize="@dimen/text_title"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"/>
+
+                <Button
+                    android:id="@+id/btnOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/order"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:backgroundTint="@color/colorAccent"
+                    app:borderWidth="0dp" />
+            </RelativeLayout>
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimary"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:paddingRight="@dimen/dimen_20dp"
+                android:paddingTop="@dimen/text_body">
+
+                <TextView
+                    android:id="@+id/txtAlamat"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alamat" />
+                <TextView
+                    android:id="@+id/spa_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txtAlamat"
+                    android:text=":"
+                    android:paddingRight="@dimen/dimen_20dp"/>
+                <TextView
+                    android:id="@+id/alamat_tukang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@id/spa_alamat"
+                    android:text="@string/alamat_lengkap" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:paddingRight="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/spacing_half">
+
+                <TextView
+                    android:id="@+id/txtSex"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jenis_kelamin" />
+                <TextView
+                    android:id="@+id/spa_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/txtSex"
+                    android:text=":"
+                    android:paddingRight="@dimen/dimen_20dp"/>
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@id/spa_sex"
+                    android:text="Laki - Laki" />
+
+            </RelativeLayout>
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:paddingRight="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/spacing_half">
+
+            <TextView
+                android:id="@+id/txtUsia"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Usia" />
+            <TextView
+                android:id="@+id/spa_Usia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/txtUsia"
+                android:text=":"
+                android:paddingRight="@dimen/dimen_20dp"/>
+            <TextView
+                android:id="@+id/Usia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@id/spa_Usia"
+                android:text="30 Tahun" />
+
+        </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pengalaman_kerja"
+                android:textFontWeight="bold"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/spacing_normal"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:id="@+id/pengalaman_list"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Riwayat Booking :"
+                android:textFontWeight="bold"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_20dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:id="@+id/history_booking"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_splash">
+        <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#4FFF" android:layout_below="@id/toolbar"/>
+        <!--logo-->
+        <ImageView
+            android:id="@+id/register_img"
+            android:layout_width="148dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/view_padding_bigger"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_logo_ogan"
+            tools:ignore="ContentDescription"
+            android:layout_below="@id/toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/register_img"
+            android:layout_margin="@dimen/spacing_triple"
+            android:background="@drawable/bg_white_rounded"
+            android:orientation="vertical">
+            <!--nik-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout.Register"
+                android:layout_marginTop="@dimen/spacing_triple"
+                android:padding="@dimen/card_margin">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userEmail_editText"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/nik"
+                    android:inputType="text|number"
+                    tools:text="NIK"
+                    android:maxLength="16"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--username-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout.Register"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:padding="@dimen/card_margin">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userNamaText"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/nama_lengkap"
+                    android:inputType="textCapWords"
+                    tools:text="@string/nama_lengkap"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--password-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout.Register"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:padding="@dimen/card_margin"
+                app:passwordToggleEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userPassword_editText"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    tools:text="@string/password"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--email-->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/ProfileComponent.TextInputLayout.Register"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:padding="@dimen/card_margin">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userEmailText"
+                    style="@style/ProfileComponent.EditText"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    tools:text="@string/email"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--jabatan-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ProfileComponent.TextInputLayout.Register"
+                android:layout_marginTop="@dimen/spacing_normal">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/otorisasi"
+                    android:text="User"
+                    android:visibility="gone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--jabatan-->
+            <ProgressBar
+                android:id="@+id/progressBarR"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+            <!--register button-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_double"
+                android:background="@drawable/btn_accent_rounded"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:id="@+id/registerButton"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

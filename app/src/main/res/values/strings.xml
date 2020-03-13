@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OganLopian</string>
+
+    <!--exit notification-->
+    <string name="press_again_exit_app">Press again to exit</string>
+
+    <string name="settings_file_name">com.bijaktechnology.oganlopian</string>
+    <string name="error_authetication_failed">Authentication failed.</string>
+    <string name="error_could_not_connect">Could not connect</string>
+    <string name="error_login_failed">Login failed</string>
+    <string name="ambil_layanan">Ambil Layanan</string>
+    <string name="nik">NIK</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="password_min_6_characters">Password (min 6 characters)</string>
+    <string name="register">Register</string>
+    <string name="layani">Layani</string>
+    <string name="bookings">Booking</string>
+    <string name="alamat_lengkap">Alamat</string>
+    <string name="cancel">Cancel</string>
+    <string name="batal">Batal</string>
+    <string name="reset">Reset</string>
+    <string name="waiting_caption">Kami akan segera memproses panggilan anda.\nHarap menunggu</string>
+    <string name="complete_caption">Ambulance sedang dalam perjalanan …</string>
+    <string name="complete_caption_doctor">Dokter sedang dalam perjalanan …</string>
+    <string name="complete_caption_bidan">Bidan sedang dalam perjalanan …</string>
+    <string name="title_activity_maps">Monitoring</string>
+    <!--google service -->
+    <string name="permission_rationale">Please grant location permission to start the service</string>
+    <!--<string name="google_maps_keys">AIzaSyAU8gfAqRfQ0MfMZ4rJxQoElJP89gOYZHY</string>-->
+    <string name="permission_denied_explanation">You have not granted location permission. So the service cannot be started.</string>
+    <string name="settings">settings</string>
+    <string name="title_alert_no_intenet">No internet</string>
+    <string name="msg_alert_no_internet">Please make sure that you have active internet connection.</string>
+    <string name="no_google_playservice_available">No Google Playservice found. Please install it.</string>
+    <string name="msg_location_service_not_started">Location Tracking Not Started</string>
+    <string name="msg_location_service_started">Location Tracking Started</string>
+    <string name="btn_label_refresh">Refresh</string>
+    <string name="sample_text">Sample Text</string>
+    <string name="sample">Sample</string>
+    <string name="no_chat_found">No Chat found</string>
+    <string name="login">Login</string>
+    <!--end of google service-->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_account">Buat Akun</string>
+    <string name="forgot_password">Lupa Password</string>
+    <string name="no_ktp">Nomor KTP</string>
+    <string name="phone_number">Nomor Telepon</string>
+    <string name="logout">Logout</string>
+    <string name="no_kk">No. Kartu Keluarga</string>
+    <string name="complete">Complete</string>
+    <string name="save">Simpan</string>
+    <string name="login_notice">*Pastikan isi data NIK di isi dengan angka (16 Char)</string>
+    <string name="splash_purwakarta">Purwakarta</string>
+    <!--Splash Screen-->
+    <string name="splash_version">Apps version 1.0.6</string>
+    <string name="splash_purwakarta_chant">Purwakarta Istimewa Jaya di Buana</string>
+    <string name="profile_change_domicile">Ganti Domisili</string>
+
+    <!--Forgot Password-->
+    <string name="reset_your_password">Reset Your Password</string>
+    <string name="please_enter_your_email_address">Please enter your email address.</string>
+    <!--Comment-->
+
+    <!--Profile-->
+    <string name="profile_data_pribadi">Data Pribadi</string>
+    <string name="profile_username">Username</string>
+    <string name="profile_name">Nama Lengkap</string>
+    <string name="profile_dob">Tanggal Lahir</string>
+    <string name="profile_mother_name">Nama Ibu Kandung</string>
+    <string name="profile_jenis_kelamin">Jenis Kelamin</string>
+    <string name="profile_civil_data">Data Kependudukan</string>
+    <string name="profile_family_list">Daftar Anggota Keluarga</string>
+    <string name="profile_status">Hubungan Keluarga</string>
+    <string name="patient_data_input_patient_data">Isi data diri pasien</string>
+
+    <!--Family Picker-->
+
+    <!--REGISTER MESSAGE-->
+    <string name="message_email_verification">Silahkan verifikasi email anda terlebih dahulu sebelum login</string>
+    <string name="cancel_prompt">Batalkan?</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="get_direction">Get Direction</string>
+    <string name="error_no_data">No Data Yet</string>
+
+    <!--Patient Data-->
+    <string name="patient_data_name">Nama Pasien</string>
+    <string name="patient_data_ktp">Nomor KTP Pasien</string>
+    <string name="patient_data_notice">*Dalam keadaan darurat, form ini dapat di isi nanti setelah keadaan memungkinkan</string>
+    <string name="patient_data_services_label">Layanan kesehatan yang digunakan</string>
+    <string name="menu_destinasi_wisata">Destinasi Wisata</string>
+
+    <!--Main Menu-->
+    <string name="menu_laporan">Laporan Warga</string>
+    <string name="menu_semar">Sampurasun Ambulans</string>
+    <string name="menu_dokter">Sampurasun Dokter</string>
+    <string name="menu_bidan">Sampurasun Bidan</string>
+    <string name="menu_lokasi">Lokasi Penting</string>
+    <string name="menu_sos">Sampurasun Polisi</string>
+    <string name="menu_sos112">Emegency Call 112</string>
+    <string name="menu_ojek">Sampurasun TOP</string>
+    <string name="menu_bursa">Sampurasun Bursa Kerja</string>
+    <string name="booking">Booking</string>
+
+    <!--Common-->
+    <string name="keluhan">Keluhan Pasien</string>
+    <string name="profile_tempat_dob">Tempat Lahir</string>
+    <string name="title_activity_lokasipenting">Lokasi Penting</string>
+    <string name="gambar_laporan">Gambar Laporan</string>
+    <string name="buat_laporan">Ambil Foto</string>
+    <string name="masukan_detail_laporan">Masukan detail laporan</string>
+    <string name="simpan_laporan">Simpan Laporan</string>
+    <string name="comment">Comment</string>
+    <string name="comment_write_here">Tulis Komentar</string>
+    <string name="send">Kirim</string>
+    <string name="title_activity_laporanmaps">Lokasi Laporan</string>
+    <string name="judul_laporan">Judul Laporan</string>
+    <string name="deskripsi_pekerjaan">Deskripsi Pekerjaan</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="masukan_nik">Masukan NIK yang didaftarkan sebelumnya</string>
+    <string name="harga_jasa">Harga Jasa</string>
+    <string name="profile">Profile</string>
+    <string name="todo">TODO</string>
+    <string name="order">Order</string>
+    <string name="alamat">Alamat :</string>
+    <string name="nama_tukang">Nama Tukang</string>
+    <string name="pengalaman_kerja">Pengalaman Kerja :</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="uraian_pekerjaan">Uraian Pekerjaan</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="jabatan">
+        <item>Pilih Jabatan</item>
+        <item>Bidan</item>
+        <item>Dokter</item>
+        <item>Petugas</item>
+        <item>Ambulance</item>
+        <item>Damkar</item>
+        <item>Operator</item>
+        <item>Admin</item>
+    </string-array>
+</resources>

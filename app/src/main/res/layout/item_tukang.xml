@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lyt_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:minHeight="60dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/profile_avatar"
+            android:layout_width="80dp"
+            android:layout_height="85dp"
+            android:layout_gravity="top"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/unknown_avatar"
+            android:contentDescription="@string/todo" />
+        <Button
+            android:id="@+id/profile_tukang"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textColor="@color/colorAccent"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:paddingRight="@dimen/dimen_20dp"
+            android:theme="@style/Widget.AppCompat.Button.Small"
+            android:text="@string/profile"
+            android:background="@drawable/btn_primary_rounded"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_below="@+id/profile_avatar"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nama_tukang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sample"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="#424242"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/alamat_tukang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alamat_lengkap"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                />
+            <TextView
+                android:id="@+id/harga_jasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/harga_jasa"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tukangid"
+                android:visibility="invisible"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <RatingBar
+                    android:id="@+id/smallRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/spacing_half"
+                    android:numStars="5"
+                    android:rating="3"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:theme="@style/RatingBar" />
+                <Button
+                    android:id="@+id/btn_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textColor="@color/colorAccent"
+                    android:paddingLeft="@dimen/dimen_20dp"
+                    android:paddingRight="@dimen/dimen_20dp"
+                    android:theme="@style/Widget.AppCompat.Button.Small"
+                    android:text="@string/order"
+                    android:background="@drawable/btn_primary_rounded"
+                    android:layout_alignParentEnd="true"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e5e555"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.balysv.materialripple.MaterialRippleLayout>
