@@ -12,10 +12,10 @@ import com.bijak.techno.oganlopian.app.MyApplication;
 import java.util.Calendar;
 
 public class ConnectivityReceiver extends BroadcastReceiver {
-    public static final String API_URL="https://api.bijaktechnology.com/oganapi/index.php/";
+    //public static final String API_URL="https://api.bijaktechnology.com/oganapi/index.php/";
     //public static final String API_URL="http://192.168.1.6:8080/oganapi/index.php/";
     //localhost
-    //public static final String API_URL="http://114.6.180.152/oganapi/index.php/";
+    public static final String API_URL="https://laporanwarga.oganlopian.purwakartakab.go.id/backend/index.php/";
     public static ConnectivityReceiverListener connectivityReceiverListener;
     public ConnectivityReceiver(){
         super();
