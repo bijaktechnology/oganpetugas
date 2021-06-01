@@ -1,0 +1,14 @@
+pwd :oganlopi123
+key0:oganlopian1
+
+oganlopian.keystore
+oganlopi123
+key0:oganlopian222
+
+.\keytool -list -v -keystore "C:\Users\AKRAM\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+
+1E:16:94:CE:F2:9F:83:3E:09:EC:85:4E:B5:E0:92:E2:9A:F0:DB:E8
+
+.\keytool -list -v -keystore D:\ANDROID\oganlopian\oganlkey.keystore -alias key0
+
+A0:DD:5E:7A:62:7C:EE:4C:EE:29:CA:4A:55:26:22:A5:8A:06:B7:6D

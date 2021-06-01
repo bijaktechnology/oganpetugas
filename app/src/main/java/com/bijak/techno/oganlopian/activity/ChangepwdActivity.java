@@ -98,6 +98,8 @@ public class ChangepwdActivity extends AppCompatActivity {
                 postData.put("user_id",usri.getUserName());
                 postData.put("email",usri.getEmail());
                 postData.put("nama",usri.getNamaLengkap());
+                postData.put("nik", usri.getNik());
+                postData.put("keycode",usri.getKeyCode());
                 Log.e("param", postData.toString());
                 HttpURLConnection Conn = (HttpURLConnection) url1.openConnection();
                 Conn.setReadTimeout(15000 /* milliseconds */);
@@ -122,7 +124,7 @@ public class ChangepwdActivity extends AppCompatActivity {
                             AlertDialog.Builder alertDialogs = new AlertDialog.Builder(ChangepwdActivity.this);
                             alertDialogs.setCancelable(false);
                             alertDialogs.setTitle("Reset Password");
-                            alertDialogs.setMessage("Link Reset Passoword telah di kirim ke email\nSilahkan check email anda");
+                            alertDialogs.setMessage("Link Reset Password telah di kirim ke email: "+ usri.getEmail()+"\nSilahkan check email anda");
                             alertDialogs.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
@@ -212,7 +214,10 @@ public class ChangepwdActivity extends AppCompatActivity {
                             usr.setUserName(obj.getString("user_id"));
                             usr.setEmail(email.getText().toString());
                             usr.setNamaLengkap(obj.getString("nama_lengkap"));
+                            usr.setKeyCode(obj.getString("keycode"));
+                            usr.setNik(obj.getString("nik"));
                         }
+                        //kirim email notifikasi
                         new KirimEmail(getApplicationContext()).execute(usr);
                     }
                 } catch (JSONException e) {

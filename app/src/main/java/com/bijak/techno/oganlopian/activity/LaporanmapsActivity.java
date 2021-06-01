@@ -35,10 +35,11 @@ public class LaporanmapsActivity extends FragmentActivity implements OnMapReadyC
     private GoogleMap mMap;
     private Toolbar toolbar;
     private ActionBar actionBar;
-    private ImageView avatar,img_kategori;
-    private TextView namapelapor,judul,kategori,tanggal;
+    private ImageView avatar, img_kategori;
+    private TextView namapelapor, judul, kategori, tanggal;
     private FloatingActionButton floatingActionButton;
-    String nama,laptitle,kat,img_kat,lat,lng;
+    String nama, laptitle, kat, img_kat, lat, lng;
+
     @SuppressLint("SetTextI18n")
     @Nullable
     @Override
@@ -47,13 +48,13 @@ public class LaporanmapsActivity extends FragmentActivity implements OnMapReadyC
         setContentView(R.layout.activity_laporanmaps);
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Lokasi Laporan");
-        toolbar.setSubtitle("Thread : "+getIntent().getStringExtra("judul"));
+        toolbar.setSubtitle("Thread : " + getIntent().getStringExtra("judul"));
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(LaporanmapsActivity.this,LaporanwrgdtlActivity.class);
-                i.putExtra("laporan_id",getIntent().getStringExtra("lap_id"));
+                Intent i = new Intent(LaporanmapsActivity.this, LaporanwrgdtlActivity.class);
+                i.putExtra("laporan_id", getIntent().getStringExtra("lap_id"));
                 startActivity(i);
                 finish();
             }
@@ -72,22 +73,22 @@ public class LaporanmapsActivity extends FragmentActivity implements OnMapReadyC
         img_kat = getIntent().getStringExtra("img_kat");
         img_kategori.setImageResource(Integer.valueOf(img_kat));
         kategori.setText(getIntent().getStringExtra("kategori"));
-        tanggal.setText(getIntent().getStringExtra("lokasi")+"\n"+getIntent().getStringExtra("tanggal"));
+        tanggal.setText(getIntent().getStringExtra("lokasi") + "\n" + getIntent().getStringExtra("tanggal"));
         lat = getIntent().getStringExtra("lat");
         lng = getIntent().getStringExtra("lng");
-        floatingActionButton=findViewById(R.id.map_detail_btn_my_location);
+        floatingActionButton = findViewById(R.id.map_detail_btn_my_location);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mMap != null)
-                {
-                    if(locationButton != null)
+                if (mMap != null) {
+                    if (locationButton != null)
                         locationButton.callOnClick();
                 }
             }
         });
 
     }
+
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id) {
@@ -95,8 +96,8 @@ public class LaporanmapsActivity extends FragmentActivity implements OnMapReadyC
                 //_updateProfile();
                 break;
             case android.R.id.home:
-                Intent i = new Intent(LaporanmapsActivity.this,LaporanwrgdtlActivity.class);
-                i.putExtra("laporan_id",getIntent().getStringExtra("lap_id"));
+                Intent i = new Intent(LaporanmapsActivity.this, LaporanwrgdtlActivity.class);
+                i.putExtra("laporan_id", getIntent().getStringExtra("lap_id"));
                 startActivity(i);
                 this.finish();
                 break;
@@ -105,6 +106,7 @@ public class LaporanmapsActivity extends FragmentActivity implements OnMapReadyC
     }
 
     private View locationButton;
+
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -117,7 +119,17 @@ public class LaporanmapsActivity extends FragmentActivity implements OnMapReadyC
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        Integer zoom =14;
+        Integer zoom = 14;
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         mMap.setMyLocationEnabled(true);
         CustomMarkerAdapter mAdapter = new CustomMarkerAdapter(this);
         mMap.setInfoWindowAdapter(mAdapter);

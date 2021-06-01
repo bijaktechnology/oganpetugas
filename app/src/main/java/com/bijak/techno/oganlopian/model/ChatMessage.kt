@@ -22,7 +22,7 @@ class ChatMessage(var text: String?, var timestamp: String?, var friendId: Strin
     val readableTime: String?
         get() {
             return try {
-                Tools.formatTime(java.lang.Long.valueOf(timestamp))
+                Tools.formatTime(timestamp?.let { java.lang.Long.valueOf(it) }!!)
             } catch (ignored: NumberFormatException) {
                 null
             }
@@ -36,7 +36,7 @@ class ChatMessage(var text: String?, var timestamp: String?, var friendId: Strin
         get() = Friend(senderId!!, senderName!!, senderPhoto!!)
 
     val comparableTimestamp: Long
-        get() = java.lang.Long.parseLong(timestamp)
+        get() = java.lang.Long.parseLong(timestamp.toString())
 
 
 }
