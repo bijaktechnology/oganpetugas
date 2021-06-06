@@ -20,8 +20,8 @@ android {
         applicationId "com.bijak.techno.oganlopian"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 15
-        versionName "1.1.3"
+        versionCode 16
+        versionName "1.1.4"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
     }

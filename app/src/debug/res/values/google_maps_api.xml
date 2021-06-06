@@ -20,8 +20,9 @@
     string in this file.
 
     AIzaSyCt7y4_nkt-sPpBbjgziqyKEpKSJS2yO20
+    AIzaSyAb18fIvOMliOwEElTaqkcdDtmpnR-yqGs
     -->
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAb18fIvOMliOwEElTaqkcdDtmpnR-yqGs</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBqBASWR6Ot4B5q868Q4BMSNz7eZXOFPaY</string>
 <!--    <string name="map_api_key">AIzaSyAWIoHklPCqim0doPCh_7e8yNyKi6XytcI</string>-->
-    <string name="map_api_key">AIzaSyAb18fIvOMliOwEElTaqkcdDtmpnR-yqGs</string>
+    <string name="map_api_key">AIzaSyBqBASWR6Ot4B5q868Q4BMSNz7eZXOFPaY</string>
 </resources>

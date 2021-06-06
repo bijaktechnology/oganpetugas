@@ -15,7 +15,7 @@ public class ConnectivityReceiver extends BroadcastReceiver {
     //public static final String API_URL="https://api.bijaktechnology.com/oganapi/index.php/";
     //public static final String API_URL="http://192.168.1.6:8080/oganapi/index.php/";
     //localhost
-    public static final String API_URL="https://laporanwarga.oganlopian.purwakartakab.go.id/backend/index.php/";
+    public static final String API_URL="http://laporanwarga.oganlopian.purwakartakab.go.id/backend/index.php/";
     public static ConnectivityReceiverListener connectivityReceiverListener;
     public ConnectivityReceiver(){
         super();

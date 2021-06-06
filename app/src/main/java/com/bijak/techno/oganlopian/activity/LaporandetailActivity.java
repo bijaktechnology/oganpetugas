@@ -196,9 +196,9 @@ public class LaporandetailActivity extends AppCompatActivity {
                 postData.put("user_id",md.getLoc_id());
                 postData.put("judul",md.getJudul());
                 postData.put("keterangan",md.getKeterangan());
-                postData.put("foto_laporan",md.getGambarLaporan());
                 postData.put("lat",md.getLatitud());
                 postData.put("lng",md.getLongitud());
+                postData.put("foto_laporan",md.getGambarLaporan());
                 Log.e("datane update",postData.toString());
                 HttpURLConnection Conn = (HttpURLConnection)url1.openConnection();
                 Conn.setReadTimeout(15000 /* milliseconds */);

@@ -136,7 +136,7 @@ public class LocationMonitoringService extends Service implements GoogleApiClien
             //Send result to activities
             sendMessageToUI(String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()));
             //TODO:baca lokasi petugas
-            //simpanData(location);
+            simpanData(location);
 
         }
 
@@ -176,6 +176,7 @@ public class LocationMonitoringService extends Service implements GoogleApiClien
         Intent intent = new Intent(ACTION_LOCATION_BROADCAST);
         intent.putExtra(EXTRA_LATITUDE, lat);
         intent.putExtra(EXTRA_LONGITUDE, lng);
+        //Log.d(TAG, lat+':'+lng);
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
 
     }
