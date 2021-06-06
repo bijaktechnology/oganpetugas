@@ -36,6 +36,7 @@ public class LaporanAdapter extends RecyclerView.Adapter<LaporanAdapter.MyViewHo
         LaporanModel md = modelList.get(position);
         holder.nama.setText(md.getNamaLengkap());
         Bitmap gbrlaporan = Constants.String2Bitmap(md.getGambarLaporan());
+
         holder.profile.setImageBitmap(gbrlaporan);
         holder.keterangan.setText(md.getJudul());
         holder.kategori.setText(md.getKategori());

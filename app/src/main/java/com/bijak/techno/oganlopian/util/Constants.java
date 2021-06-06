@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.Base64;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 
@@ -110,11 +111,15 @@ public class Constants {
         txt.setAdapter(adapter);
     }
     public static Bitmap String2Bitmap(String decodeBitmap){
-        final String encodedString = decodeBitmap;
-        final String pureBase64Encoded = encodedString.substring(encodedString.indexOf(",")  + 1);
-        final byte[] decodedBytes = Base64.decode(pureBase64Encoded, Base64.DEFAULT);
-        Bitmap decodedBitmap = BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
-        return decodedBitmap;
+        try {
+            final String encodedString = decodeBitmap;
+            final String pureBase64Encoded = encodedString.substring(encodedString.indexOf(",") + 1);
+            final byte[] decodedBytes = Base64.decode(pureBase64Encoded, Base64.DEFAULT);
+            Bitmap decodedBitmap = BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
+            return decodedBitmap;
+        } finally {
+            Log.d("Bitmap",decodeBitmap);
+        }
     }
     public static String bitmapToBase64String(Bitmap bmp, int quality) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
